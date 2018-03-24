@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class ECHO_cli
+public class ClientEcho
 {
 public static void main(String args[]) throws Exception
 {
@@ -13,4 +13,4 @@ public static void main(String args[]) throws Exception
    Port=Integer.parseInt(Buf.readLine());
    Socket sok=new Socket("localhost",Port);
    if(sok.isConnected()==true)
-    System.out.println(" Server Socket is Connected Succecfully. ");
+    System.out.println(" Server Socket connected Successfully");
