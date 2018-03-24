@@ -14,4 +14,13 @@ public static void main(String args[]) throws Exception
    Socket sok=new Socket("localhost",Port);
    if(sok.isConnected()==true)
     System.out.println(" Server Socket connected Successfully");
-
+   InputStream in=sok.getInputStream();
+   OutputStream ou=sok.getOutputStream();
+   PrintWriter pr=new PrintWriter(ou);
+   BufferedReader buf1=new BufferedReader(new InputStreamReader(System.in));
+   BufferedReader buf2=new BufferedReader(new InputStreamReader(in));
+   String str1,str2;
+   System.out.print(" Enter the Message : ");
+   str1=buf1.readLine();
+   pr.println(str1);
+   pr.flush();
